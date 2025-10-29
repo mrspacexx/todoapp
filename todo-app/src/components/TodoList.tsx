@@ -42,7 +42,7 @@ export function TodoList({
               <div className="w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"></div>
             </div>
           </div>
-          <p className="text-slate-600 font-medium">Todo'lar yükleniyor...</p>
+          <p className="text-slate-600 font-medium">Todo&apos;lar yükleniyor...</p>
           <p className="text-sm text-slate-500 mt-2">Lütfen bekleyin</p>
         </div>
       </div>
@@ -69,7 +69,7 @@ export function TodoList({
         <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 max-w-md mx-auto">
           <h3 className="text-lg font-semibold text-gray-800 mb-2">Henüz Todo Yok</h3>
           <p className="text-gray-600 mb-4">
-            İlk todo'nuzu oluşturmak için aşağıdaki butona tıklayın.
+            İlk todo&apos;nuzu oluşturmak için aşağıdaki butona tıklayın.
           </p>
           <Button onClick={onCreateNew} className="inline-flex items-center">
             <Plus className="h-4 w-4 mr-2" />

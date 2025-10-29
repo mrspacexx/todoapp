@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import Image from 'next/image'
 import { Todo, TodoFilters, CreateTodoRequest } from '@/types/todo'
 import { useTodos } from '@/hooks/useTodos'
 import { todoApi } from '@/lib/api'
@@ -181,9 +182,11 @@ export default function HomePage() {
           <div className="flex justify-between items-center h-16 sm:h-20">
             <div className="flex items-center space-x-3 sm:space-x-4">
               <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-2xl overflow-hidden shadow-2xl ring-4 ring-white/20">
-                <img 
+                <Image 
                   src="/ethis-logo.jpg" 
                   alt="ETHIS STAJYER Logo" 
+                  width={56}
+                  height={56}
                   className="w-full h-full object-cover"
                 />
               </div>

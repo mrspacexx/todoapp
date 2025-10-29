@@ -107,7 +107,7 @@ export function KanbanBoard({
         <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 max-w-md mx-auto">
           <h3 className="text-lg font-semibold text-gray-800 mb-2">Henüz Todo Yok</h3>
           <p className="text-gray-600 mb-4">
-            İlk todo'nuzu oluşturmak için aşağıdaki butona tıklayın.
+            İlk todo&apos;nuzu oluşturmak için aşağıdaki butona tıklayın.
           </p>
           <button
             onClick={onCreateNew}
