@@ -18,7 +18,7 @@ export async function getChatResponse(
   try {
     // Todo verilerini string'e çevir
     const todosText = todos.map(todo => 
-      `- ${todo.title} (${todo.priority} öncelik, ${todo.status} durum, ${todo.due_date ? new Date(todo.due_date).toLocaleDateString('tr-TR') : 'tarih yok'})`
+      `- ${todo.title} (${todo.priority} öncelik, ${todo.status} durum, ${todo.dueDate ? new Date(todo.dueDate).toLocaleDateString('tr-TR') : 'tarih yok'})`
     ).join('\n')
 
     const systemPrompt = `Sen bir todo yönetim asistanısın. Kullanıcının todo'larına yardım ediyorsun.

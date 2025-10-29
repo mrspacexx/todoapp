@@ -66,7 +66,7 @@ export const todoApi = {
       ...response.data,
       data: response.data.data?.map((todo: any) => ({
         ...todo,
-        dueDate: todo.due_date,
+        dueDate: todo.dueDate,
         createdAt: todo.created_at,
         updatedAt: todo.updated_at,
         tags: todo.tags?.map((tag: any) => ({
@@ -88,7 +88,7 @@ export const todoApi = {
     const responseTodo = response.data
     return {
       ...responseTodo,
-      dueDate: responseTodo.due_date,
+      dueDate: responseTodo.dueDate,
       createdAt: responseTodo.created_at,
       updatedAt: responseTodo.updated_at,
       tags: responseTodo.tags?.map((tag: any) => ({
@@ -106,7 +106,7 @@ export const todoApi = {
       title: todo.title,
       description: todo.description,
       priority: todo.priority,
-      due_date: todo.dueDate,
+      dueDate: todo.dueDate,
       tags: todo.tags,
     }
     const response = await api.post('/todos', backendTodo)
@@ -115,7 +115,7 @@ export const todoApi = {
     const responseTodo = response.data
     return {
       ...responseTodo,
-      dueDate: responseTodo.due_date,
+      dueDate: responseTodo.dueDate,
       createdAt: responseTodo.created_at,
       updatedAt: responseTodo.updated_at,
       tags: responseTodo.tags?.map((tag: any) => ({
@@ -134,7 +134,7 @@ export const todoApi = {
       description: todo.description,
       status: todo.status,
       priority: todo.priority,
-      due_date: todo.dueDate,
+      dueDate: todo.dueDate,
       tags: todo.tags,
     }
     // Remove undefined values
@@ -147,7 +147,7 @@ export const todoApi = {
     const responseTodo = response.data
     return {
       ...responseTodo,
-      dueDate: responseTodo.due_date,
+      dueDate: responseTodo.dueDate,
       createdAt: responseTodo.created_at,
       updatedAt: responseTodo.updated_at,
       tags: responseTodo.tags?.map((tag: any) => ({
