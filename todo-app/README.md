@@ -61,8 +61,31 @@ npm install
 cp env.example .env.local
 ```
 
-`.env.local` dosyasını düzenleyin:
+4. **`.env.local` dosyasını düzenleyin:**
 ```env
+# Backend API URL (yerel geliştirme için)
+NEXT_PUBLIC_API_URL=http://localhost:8000/api
+
+# OpenAI API Key (chatbot için)
+OPENAI_API_KEY=your_openai_api_key_here
+```
+
+5. **Backend'i de çalıştırın:**
+```bash
+# Ayrı terminal'de
+cd ../todo-backend
+composer install
+php artisan key:generate
+php artisan migrate
+php artisan serve
+```
+
+6. **Geliştirme sunucusunu başlatın:**
+```bash
+npm run dev
+```
+
+**Önemli:** Yerel geliştirme için hem frontend hem backend çalışmalı!
 NEXT_PUBLIC_API_URL=http://localhost:8000/api
 OPENAI_API_KEY=your_openai_api_key_here  # Required for chatbot
 ```
