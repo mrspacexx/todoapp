@@ -139,7 +139,7 @@ export const todoApi = {
     }
     // Remove undefined values
     Object.keys(backendTodo).forEach(key => 
-      backendTodo[key] === undefined && delete backendTodo[key]
+      (backendTodo as any)[key] === undefined && delete (backendTodo as any)[key]
     )
     const response = await api.patch(`/todos/${id}`, backendTodo)
     
