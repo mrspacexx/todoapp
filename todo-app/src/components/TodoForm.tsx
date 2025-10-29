@@ -56,7 +56,7 @@ export function TodoForm({ todo, onSubmit, onCancel, loading = false }: TodoForm
     }
   }
 
-  const handleChange = (field: keyof CreateTodoRequest, value: string) => {
+  const handleChange = (field: keyof CreateTodoRequest, value: string | number[]) => {
     setFormData(prev => ({ ...prev, [field]: value }))
     if (errors[field]) {
       setErrors(prev => ({ ...prev, [field]: '' }))
