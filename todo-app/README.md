@@ -20,7 +20,16 @@ Next.js 14 ve Laravel API ile geliştirilmiş modern bir todo (yapılacaklar) uy
 - ⭐ **Drag & Drop**: Status sütunları arasında sürükle-bırak (Kanban görünümü)
 - ⭐ **Bildirim/Toasts**: İşlem başarı/hatada kullanıcıya geri bildirim
 - ⭐ **Testler**: Jest + React Testing Library
-- ⭐ **AI Chatbot**: OpenAI entegrasyonu ile akıllı todo asistanı
+- ⭐ **AI Chatbot**: OpenAI entegrasyonu ile akıllı todo asistanı (🔒 API key gerekli)
+
+## 🔒 Güvenlik Notu
+
+**API Key'ler Güvenli Şekilde Saklanıyor:**
+- ✅ OpenAI API key'i kodda hardcoded değil
+- ✅ Environment variables ile güvenli şekilde yönetiliyor
+- ✅ GitHub'da hiçbir API key bulunmuyor
+- ✅ Canlı demo'da tam fonksiyonel çalışıyor
+- ✅ Local development için `.env.local` dosyası gerekli
 
 ### Görünüm Modları
 - **Grid View**: Kart görünümü
@@ -61,6 +70,8 @@ OPENAI_API_KEY=your_openai_api_key_here  # Required for chatbot
 **Not**: `.env.local` dosyası otomatik olarak `.gitignore`'da bulunur ve GitHub'a pushlanmaz. API key'leriniz güvende kalır.
 
 **Chatbot için**: OpenAI API key'i gerekli. API key olmadan chatbot çalışmaz.
+
+**🔒 Güvenlik**: Bu projede API key'ler güvenli şekilde environment variables olarak yönetiliyor. Kodda hardcoded API key bulunmuyor.
 
 4. **Geliştirme sunucusunu başlatın:**
 ```bash
@@ -279,9 +290,11 @@ Uygulama tüm cihaz boyutlarında optimize edilmiştir:
 ### Vercel (Önerilen)
 1. GitHub repository'sini Vercel'e bağlayın
 2. Environment variables'ları ayarlayın:
-   - `NEXT_PUBLIC_API_URL`
-   - `OPENAI_API_KEY`
+   - `NEXT_PUBLIC_API_URL`: Backend API URL'i
+   - `OPENAI_API_KEY`: OpenAI API key'i (chatbot için)
 3. Otomatik deployment aktif olacaktır
+
+**🔒 Güvenlik**: Vercel'de environment variables güvenli şekilde saklanır ve kodda görünmez.
 
 ### Diğer Platformlar
 - **Netlify**: Static site olarak deploy
@@ -303,6 +316,8 @@ Chatbot özelliği OpenAI API kullanarak akıllı todo yönetimi sağlar. **API 
 - Akıllı öneriler sunar
 - Türkçe dil desteği
 - Kullanıcı dostu arayüz
+
+**🔒 Güvenlik**: API key environment variable olarak saklanır, kodda görünmez.
 
 ## 🔒 Güvenlik
 
