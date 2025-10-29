@@ -127,10 +127,10 @@ export function DraggableTodo({ todo, onEdit, onDelete, selected = false, onSele
           </div>
 
           {/* Due Date */}
-          {todo.due_date && (
+          {todo.dueDate && (
             <div className="flex items-center gap-1 text-xs text-slate-500">
               <Calendar className="h-3 w-3" />
-              <span>{formatDateTime(todo.due_date)}</span>
+              <span>{formatDateTime(todo.dueDate)}</span>
             </div>
           )}
         </div>
